@@ -1,10 +1,13 @@
 package com.phantom;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class HelloSpring {
     public static void main(String[] args) {
-        MessageProvider messageProvider = MessageSupportFactory.getInstance().getMessageProvider();
-        MessageRender messageRender = MessageSupportFactory.getInstance().getMessageRender();
-        messageRender.setMessageProvider(messageProvider);
+        ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
+       MessageRender messageRender = context.getBean(MessageRender.class);
         messageRender.render();
+        //context.getBean("render",MessageRender.class).render();
     }
 }

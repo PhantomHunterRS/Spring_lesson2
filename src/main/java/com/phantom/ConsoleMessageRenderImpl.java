@@ -2,6 +2,13 @@ package com.phantom;
 
 public class ConsoleMessageRenderImpl implements MessageRender {
 
+    public ConsoleMessageRenderImpl() {
+    }
+
+    public ConsoleMessageRenderImpl(MessageProvider messageProvider) {
+        this.messageProvider = messageProvider;
+    }
+
     MessageProvider messageProvider;
 
     @Override

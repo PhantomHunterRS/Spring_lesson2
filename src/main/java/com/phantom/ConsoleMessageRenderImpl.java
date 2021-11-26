@@ -1,5 +1,10 @@
 package com.phantom;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class ConsoleMessageRenderImpl implements MessageRender {
 
     public ConsoleMessageRenderImpl() {
@@ -8,7 +13,8 @@ public class ConsoleMessageRenderImpl implements MessageRender {
     public ConsoleMessageRenderImpl(MessageProvider messageProvider) {
         this.messageProvider = messageProvider;
     }
-
+    @Autowired
+    @Qualifier("Like")
     MessageProvider messageProvider;
 
     @Override

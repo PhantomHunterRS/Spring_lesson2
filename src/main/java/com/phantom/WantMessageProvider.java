@@ -1,8 +1,13 @@
 package com.phantom;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.annotation.Priority;
 
+@Component ("want")
 public class WantMessageProvider implements MessageProvider {
 
     @InjectFoodStuff

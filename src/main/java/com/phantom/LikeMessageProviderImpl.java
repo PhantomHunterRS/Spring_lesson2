@@ -1,5 +1,8 @@
 package com.phantom;
 
+import org.springframework.stereotype.Component;
+
+@Component("Like")
 public class LikeMessageProviderImpl implements MessageProvider {
 
 

@@ -1,6 +1,7 @@
 package com.phantom;
 
 
+import com.phantom.config.HelloConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
